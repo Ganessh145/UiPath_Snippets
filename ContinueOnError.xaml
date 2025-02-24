@@ -1,0 +1,110 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ContinueOnError" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ContinueOnError_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ContinueOnError" sap:VirtualizedContainerService.HintSize="729.6,570.84" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="When the &quot;ContinueOnError&quot; property is set to True on an activity that has a scope (such as Attach Window, Attach Browser, or Use Application Browser), any errors thrown by the activities within the scope's DO container will also be ignored. This means that even if an error occurs within the scope, the execution will continue without stopping.&#xD;&#xA;Even if there is any error on Attach browser it will step into the DO scope, and it will fail there because of container selector issue." AttachMode="ByInstance" ContinueOnError="True" DisplayName="Use Browser Edge: Cricket scorecard - Pakistan vs India, 5th Match, Group A, ICC Champions Trophy, 2" sap:VirtualizedContainerService.HintSize="453.6,532.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="251ef151-45a3-4d0f-b8e6-15ed0ba1d789" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,168.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NNavigateBrowser Action="Refresh" DisplayName="Navigate Browser - Refresh" sap:VirtualizedContainerService.HintSize="382.4,107.2" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V4" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Edge" IconBase64="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" InformativeScreenshot="a17b60d942477b284be3f60815a13b0f.jpg" Selector="&lt;html app='msedge.exe' title='Cricket qwscorecard - Pakistan vs India, 5th Match, Group A, ICC Champions Trophy, 2025 | Cricbuzz.com' /&gt;" Title="Cricket scorecard - Pakistan vs India, 5th Match, Group A, ICC Champions Trophy, 2025 | Cricbuzz.com" Url="https://www.cricbuzz.com/live-cricket-scorecard/112420/pak-vs-ind-5th-match-group-a-icc-champions-trophy-2025" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
